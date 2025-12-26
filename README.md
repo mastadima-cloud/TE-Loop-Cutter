@@ -52,7 +52,7 @@ npm run electron:build:mac
 
 
 
-🎛️ Supported Devices
+### 🎛️ Supported Devices
 ✅ OP-XY (ENVY) - WAV format with metadata
 
 ✅ OP-1 (OG) - AIFF format with TE metadata

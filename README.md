@@ -49,3 +49,31 @@ npm run electron:dev
 
 # Build macOS app
 npm run electron:build:mac
+
+
+
+🎛️ Supported Devices
+✅ OP-XY (ENVY) - WAV format with metadata
+
+✅ OP-1 (OG) - AIFF format with TE metadata
+
+✅ OP-Z - AIFF format
+
+✅ EP-133 KO II - WAV format
+
+✅ OP-1 FIELD - WAV format with metadata
+
+🎨 Tech Stack
+Frontend: React 18 + TypeScript
+
+Styling: Tailwind CSS
+
+Build Tool: Vite
+
+Audio Processing: Web Audio API
+
+Desktop: Electron
+
+Icons: Lucide React
+
+

@@ -1,8 +1,9 @@
 # Loop Cutter 🎵✂️
 
 Offline Loop Cutter for Teenage Engineering Devices (OP-1, OP-XY, OP-Z, EP-133 KO II)
+<img width="1661" height="938" alt="Снимок экрана 2025-12-26 в 14 59 51" src="https://github.com/user-attachments/assets/1a9a3690-ff0f-44c0-a902-11d9c9a1addc" />
 
-![Loop Cutter Screenshot](public/assets/screenshot.png)
+
 
 ## ✨ Features
 

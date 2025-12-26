@@ -42,7 +42,7 @@ Icons: Lucide React
 ## 🚀 Quick Start
 
 ### Web Version
-1. Visit [loop-cutter.app](https://your-username.github.io/loop-cutter) (when deployed)
+1. Visit http://localhost:5173/ (when deployed)
 2. Upload an audio file (WAV, MP3, etc.)
 3. Select your loop region
 4. Save slices and export

@@ -15,6 +15,30 @@ Offline Loop Cutter for Teenage Engineering Devices (OP-1, OP-XY, OP-Z, EP-133 K
 - 🎵 **Sample Chain Creation** - Combine loops into TE-compatible patches
 - 🌐 **Offline Ready** - PWA that works without internet connection
 
+### 🎛️ Supported Devices
+✅ OP-XY (ENVY) - WAV format with metadata
+
+✅ OP-1 (OG) - AIFF format with TE metadata
+
+✅ OP-Z - AIFF format
+
+✅ EP-133 KO II - WAV format
+
+✅ OP-1 FIELD - WAV format with metadata
+
+🎨 Tech Stack
+Frontend: React 18 + TypeScript
+
+Styling: Tailwind CSS
+
+Build Tool: Vite
+
+Audio Processing: Web Audio API
+
+Desktop: Electron
+
+Icons: Lucide React
+
 ## 🚀 Quick Start
 
 ### Web Version
@@ -52,28 +76,6 @@ npm run electron:build:mac
 
 
 
-### 🎛️ Supported Devices
-✅ OP-XY (ENVY) - WAV format with metadata
 
-✅ OP-1 (OG) - AIFF format with TE metadata
-
-✅ OP-Z - AIFF format
-
-✅ EP-133 KO II - WAV format
-
-✅ OP-1 FIELD - WAV format with metadata
-
-🎨 Tech Stack
-Frontend: React 18 + TypeScript
-
-Styling: Tailwind CSS
-
-Build Tool: Vite
-
-Audio Processing: Web Audio API
-
-Desktop: Electron
-
-Icons: Lucide React
 
 

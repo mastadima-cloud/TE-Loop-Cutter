@@ -1,0 +1,16 @@
+{
+  "name": "TE Loop Cutter",
+  "short_name": "Loop Cutter",
+  "description": "Offline Loop Cutter for Teenage Engineering Devices",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

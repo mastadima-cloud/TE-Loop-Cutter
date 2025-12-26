@@ -39,43 +39,144 @@ Desktop: Electron
 
 Icons: Lucide React
 
-## 🚀 Quick Start
 
-### Web Version
-1. Visit http://localhost:5173/ (when deployed)
-2. Upload an audio file (WAV, MP3, etc.)
-3. Select your loop region
-4. Save slices and export
 
-### Desktop App (macOS)
-1. Download `Loop Cutter.dmg` from Releases
-2. Drag to Applications folder
-3. Run the app
 
-## 🔧 Development
+## 🚀 How to Run Locally (Any OS: Windows/macOS/Linux)
 
+### Option 1: In Browser (Easiest)
+1. **Install Node.js** (version 18 or higher):
+   - Windows/macOS: Download from [nodejs.org](https://nodejs.org/)
+   - Linux: `sudo apt install nodejs npm` (Ubuntu/Debian)
+
+2. **Download the project**:
 ```bash
-# Clone repository
+# Option A: Via Git
 git clone https://github.com/your-username/loop-cutter.git
 cd loop-cutter
 
-# Install dependencies
+# Option B: Download ZIP from GitHub
+# 1. Click "Code" → "Download ZIP"
+# 2. Extract the archive
+# 3. Open terminal in the project folder
+```
+
+3. **Install dependencies**:
+```bash
+npm install
+```
+
+4. **Start the local server**:
+```bash
+npm run dev
+```
+
+5. **Open in browser**: `http://localhost:5173`
+
+### Option 2: As Desktop App (macOS only for now)
+
+#### For macOS:
+1. **Download** `Loop Cutter.dmg` from [Releases](https://github.com/your-username/loop-cutter/releases)
+2. **Open the DMG file**
+3. **Drag** the app to Applications folder
+4. **Launch** from Launchpad or Finder
+
+**⚠️ Note for Windows/Linux users**:  
+Desktop version for your OS is currently in development. Use Option 1 (browser) - all features are identical!
+
+## 🎯 How to Use
+
+1. **Load Audio**:
+   - Drag & drop audio file (WAV, MP3, AIFF) into the center area
+   - Or click "Load Source Audio"
+   
+2. **Select Loops**:
+   - Click and drag on the waveform
+   - Use 1B, 2B, 4B, 8B buttons for automatic bar-based selection
+   
+3. **Adjust Settings**:
+   - **TARGET DEVICE**: Choose your device (OP-1, OP-XY, etc.)
+   - **BPM**: Tempo (auto-detected or manual)
+   - **LOOP LENGTH**: Duration of selected region
+   
+4. **Save & Export**:
+   - Click yellow save button to add to collection
+   - Use "BATCH EXPORT" for all loops
+   - Use "EXPORT AS SAMPLE CHAIN" for TE-compatible patches
+
+## 🔧 For Developers
+
+```bash
+# Development
+npm run dev            # Start web server
+npm run electron:dev   # Start Electron app (desktop)
+
+# Build
+npm run build          # Build web version
+npm run electron:build # Build desktop apps
+```
+
+## 📦 Project Status
+
+- ✅ **Web version**: Fully functional (all browsers)
+- ✅ **macOS app**: Available (see Releases)
+- 🔄 **Windows app**: In development
+- 🔄 **Linux app**: Planned
+
+## 🤝 Contributing
+
+Want Windows/Linux builds? Help us set up GitHub Actions! PRs welcome.
+
+## 📄 License
+
+MIT - Free to use and modify
+```
+
+## Additional notes to add to your project:
+
+### Update package.json with better scripts:
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env NODE_ENV=development electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "electron:build:mac": "npm run build && electron-builder --mac",
+    "electron:build:win": "echo 'Windows build requires GitHub Actions setup'",
+    "help": "echo 'Run npm run dev for web version or npm run electron:dev for desktop (macOS)'"
+  }
+}
+```
+
+### Create a simple setup script for new users:
+```bash
+cat > setup.sh << 'EOF'
+#!/bin/bash
+echo "🚀 Loop Cutter Setup"
+echo "===================="
+
+if ! command -v node &> /dev/null; then
+    echo "❌ Node.js not found!"
+    echo "Please install Node.js from https://nodejs.org/"
+    exit 1
+fi
+
+echo "✅ Node.js found: $(node --version)"
+
+echo "📦 Installing dependencies..."
 npm install
 
-# Run development server
-npm run dev
+echo "🎉 Setup complete!"
+echo ""
+echo "To start the app:"
+echo "  Web version:    npm run dev"
+echo "  Desktop (macOS): npm run electron:dev"
+echo ""
+echo "Then open http://localhost:5173 in your browser"
+EOF
 
-# Build for production
-npm run build
-
-# Run Electron app (desktop)
-npm run electron:dev
-
-# Build macOS app
-npm run electron:build:mac
-
-
-
-
-
+chmod +x setup.sh
+```
 
